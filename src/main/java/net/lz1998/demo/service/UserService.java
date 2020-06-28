@@ -31,4 +31,13 @@ public interface UserService {
      * @return 注册结果
      */
     String register(Long userId, String verificationCode);
+
+
+    /**
+     * 为了测试作业临时加的
+     *
+     * @param userId   用户id
+     * @param password 密码
+     */
+    void addNewUser(Long userId, String password);
 }

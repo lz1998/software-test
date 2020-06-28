@@ -11,3 +11,12 @@ spring:
       - net.lz1998.demo.plugin.SecurityPlugin # 用于页面注册，接受验证码
       - net.lz1998.demo.plugin.WelcomePlugin # 入群欢迎插件
       - net.lz1998.demo.plugin.LearnPlugin # 自定义学习插件
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:./db;CACHE_SIZE=131072;MV_STORE=false
+    #    url: jdbc:h2:mem:wca #需要500M内存
+    username: root
+    password: 123
+  h2:
+    console:
+      enabled: true

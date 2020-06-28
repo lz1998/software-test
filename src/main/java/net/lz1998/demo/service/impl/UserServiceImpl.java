@@ -117,6 +117,16 @@ public class UserServiceImpl implements UserService {
         return "验证码错误";
     }
 
+    @Override
+    public void addNewUser(Long userId, String password) {
+        User user = User.builder()
+                .userId(userId)
+                .password(passwordEncoder.encode(password))
+                .build();
+
+        userRepository.save(user);
+    }
+
     /**
      * 获取验证码
      *
