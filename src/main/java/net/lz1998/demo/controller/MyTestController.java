@@ -3,6 +3,7 @@ package net.lz1998.demo.controller;
 import net.lz1998.demo.entity.MyTest;
 import net.lz1998.demo.repository.MyTestRepository;
 import net.lz1998.demo.response.Response;
+import net.lz1998.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -20,6 +21,9 @@ import java.util.UUID;
 public class MyTestController {
     @Autowired
     MyTestRepository myTestRepository;
+
+    @Autowired
+    UserService userService;
 
     @RequestMapping("/saveTest")
     public Response saveTest(MyTest myTest) {

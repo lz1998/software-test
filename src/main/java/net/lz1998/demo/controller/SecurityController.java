@@ -37,4 +37,9 @@ public class SecurityController {
     }
 
 
+    @RequestMapping("/addUser")
+    public String addUser(Long userId,String password){
+        userService.addNewUser(userId,password);
+        return "ok";
+    }
 }
